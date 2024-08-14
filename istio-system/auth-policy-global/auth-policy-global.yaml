@@ -1,0 +1,15 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: auth-policy-global
+  namespace: foo
+spec:
+  action: ALLOW
+  selector:
+    matchLabels:
+      istio: ingressgateway 
+  rules:
+  - from:
+    - sourceIPBlocks:
+      - "8.8.8.8"       # Google DNS
+      - "8.8.4.4"       # Google DNS
