@@ -6,7 +6,7 @@ $ helm repo update istio
 
 ### Create Namespace
 ```
-kubectl create namespace istio-system
+$ kubectl create namespace istio-system
 ```
 
 ### Install chart
